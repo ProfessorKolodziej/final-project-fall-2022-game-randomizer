@@ -22,12 +22,21 @@ to help you out.
 	--size-xl: 1200px;
 */
 
+
+body {
+	background-image: url(src/images/Start.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+
 h1 {
 	color: var(--color-primary);
 }
 
 /* This uses the same value as --size-xs. */
-@media screen and (width >= 320px) {
+@media screen and (width >=320px) {
 	.content-container {
 		margin: 0 auto;
 		max-width: 768px;
