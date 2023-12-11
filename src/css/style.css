@@ -28,6 +28,12 @@ to help you out.
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: 1;
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
 }
 
 .web-title {
@@ -54,7 +60,7 @@ to help you out.
 }
 
 h2 {
-	color: #2BAC47;
+	color: #867FD9;
 	text-align: center;
 	font-family: 'Inknut Antiqua', sans-serif;
 	font-size: 24px;
@@ -88,6 +94,15 @@ h2 {
 	line-height: 18px;
 
 }
+
+
+.screenshot-container img {
+	max-width: 50%;
+	height: auto;
+	display: block;
+	margin-bottom: 10px;
+}
+
 
 
 
