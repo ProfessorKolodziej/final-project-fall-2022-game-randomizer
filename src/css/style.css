@@ -21,102 +21,496 @@ to help you out.
 	--size-lg: 1024px;
 	--size-xl: 1200px;
 */
+/*phone size*/
+@media (min-width: 375px) {
+	.background-img {
+		background-image: url('src/images/Start.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: 1;
+		background-position: center;
+		height: 750px;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
 
+	}
 
-.background-img {
-	background-image: url('src/images/Start.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	z-index: 1;
-	background-position: center;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-	padding: 0;
-}
+	.web-title {
+		position: absolute;
+		top: 38%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		z-index: 2;
+		color: #87D4EC;
+		text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+		font-family: Inter;
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		display: flex;
+		width: 527px;
+		height: 91px;
+		flex-direction: column;
+		justify-content: center;
+		flex-shrink: 0;
 
-.web-title {
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	z-index: 2;
-	color: #87D4EC;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-	font-family: Inter;
-	font-size: 45px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	display: flex;
-	width: 527px;
-	height: 91px;
-	flex-direction: column;
-	justify-content: center;
-	flex-shrink: 0;
+	}
 
-}
+	h2 {
+		color: #2DBA98;
+		text-align: center;
+		font-family: 'Inknut Antiqua', sans-serif;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 24px;
+		width: 300px;
+		height: 74px;
+		flex-shrink: 0;
+		position: absolute;
+		right: 110px;
+		top: 65%;
+		text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
 
-h2 {
-	color: #867FD9;
-	text-align: center;
-	font-family: 'Inknut Antiqua', sans-serif;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 24px;
-	width: 455px;
-	height: 74px;
-	flex-shrink: 0;
+	}
 
-}
+	.plug-in-button {
+		display: flex;
+		width: 80px;
 
-.plug-in-button {
-	display: flex;
-	width: 170px;
-	height: 59px;
-	padding: 16px 24px;
-	align-items: flex-start;
-	gap: 8px;
-	flex-shrink: 0;
-	border-radius: 6px;
-	background: #9A53D0;
-	margin: 0 auto;
-	display: block;
-	color: #FFFFFF;
-	text-align: center;
-	font-family: 'Inknut Antiqua', sans-serif;
-	font-size: 29px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 18px;
+		height: 80px;
+		padding: 16px 24px;
+		align-items: center;
 
-}
+		justify-content: center;
 
+		border-radius: 50%;
 
-.screenshot-container img {
-	max-width: 50%;
-	height: auto;
-	display: block;
-	margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* This uses the same value as --size-xs. */
-@media screen and (width >=320px) {
-	.content-container {
+		background: #9A53D0;
 		margin: 0 auto;
-		max-width: 768px;
+		display: block;
+		color: #FFFFFF;
+		text-align: center;
+		font-family: 'Inknut Antiqua', sans-serif;
+		font-size: 13px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 18px;
+		position: relative;
+		top: 90%;
+	}
+
+	.plug-in-button.clicked {
+		display: flex;
+		width: 80px;
+		height: 80px;
+		padding: 16px 24px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		font-size: 13px;
+		position: fixed;
+		top: 450%;
+		right: 225px;
+	}
+
+
+
+	.reference {
+		color: #FFFFFF;
+		text-align: center;
+		font-size: 13px;
+		width: 500px;
+		position: relative;
+		bottom: -310px;
+		right: -20px;
+
+
+	}
+
+	.new-title {
+		color: #87D4EC;
+		font-size: 20px;
+		font-weight: 800;
+		line-height: normal;
+		text-shadow: 1px 1px 1px black;
+		height: 50px;
+		position: fixed;
+		top: -180px;
+		left: 0;
+		width: 100%;
+
+	}
+
+	.new-text {
+		font-size: 11px;
+		line-height: 1.5;
+		text-align: left;
+		color: white;
+		width: 300px;
+
+		position: absolute;
+		top: 100px;
+		right: 110px;
+
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 14;
+		height: auto;
+		-webkit-box-orient: vertical;
+
+	}
+
+	.screenshot-image {
+		max-width: 250px;
+		max-height: 350px;
+		position: fixed;
+		left: 140px;
+		top: -20%;
+		transform: translateY(-50%);
+
+	}
+
+	.youtube-link {
+		font-size: 15px;
+		position: fixed;
+		left: 220px;
+		bottom: 10px;
+		color: aqua;
+	}
+
+
+}
+
+
+
+/* iPad size */
+@media (min-width: 768px) {
+	.background-img {
+		background-image: url('src/images/Start.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: 1;
+		background-position: center;
+		height: 1500px;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+
+	}
+
+	.web-title {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		z-index: 2;
+		color: #87D4EC;
+		text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+		font-family: Inter;
+		font-size: 45px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		display: flex;
+		width: 527px;
+		height: 91px;
+		flex-direction: column;
+		justify-content: center;
+		flex-shrink: 0;
+
+	}
+
+	h2 {
+		color: #49A38D;
+		text-align: center;
+		font-family: 'Inknut Antiqua', sans-serif;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 24px;
+		width: 455px;
+		height: 74px;
+		flex-shrink: 0;
+		position: absolute;
+		right: 50px;
+		top: 65%;
+		text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+	}
+
+	.plug-in-button {
+		display: flex;
+		width: 170px;
+		height: 59px;
+		padding: 16px 24px;
+		align-items: flex-start;
+		gap: 8px;
+		flex-shrink: 0;
+		border-radius: 6px;
+		background: #9A53D0;
+		margin: 0 auto;
+		display: block;
+		color: #FFFFFF;
+		text-align: center;
+		font-family: 'Inknut Antiqua', sans-serif;
+		font-size: 29px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 18px;
+		position: relative;
+		top: 50%;
+
+	}
+
+	.plug-in-button.clicked {
+		width: 140px;
+		height: 50px;
+		font-size: 18px;
+		padding: 5px 10px;
+		position: fixed;
+		top: 1060%;
+		right: 190px;
+
+	}
+
+	.reference {
+		color: #FFFFFF;
+		text-align: center;
+		font-size: 15px;
+		width: 500px;
+		position: relative;
+		bottom: -920px;
+		right: -20px;
+
+
+	}
+
+	.new-title {
+		color: #87D4EC;
+		font-size: 40px;
+		font-weight: 800;
+		line-height: normal;
+		text-shadow: 1px 1px 1px black;
+		height: 50px;
+		position: fixed;
+		top: -230px;
+		left: 0;
+		width: 100%;
+
+
+
+	}
+
+	.screenshot-image {
+		max-width: 550px;
+		max-height: 450px;
+		position: fixed;
+		left: 0;
+		top: 70%;
+		transform: translateY(-50%);
+
+	}
+
+	.new-text {
+		font-size: 15px;
+		line-height: 1.5;
+		text-align: center;
+		color: white;
+		width: 600px;
+
+		position: absolute;
+		top: 320px;
+		right: -20px;
+
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 25;
+		height: auto;
+		-webkit-box-orient: vertical;
+
+	}
+
+	.youtube-link {
+		font-size: 25px;
+		position: fixed;
+		left: 200px;
+		bottom: -190px;
+		color: aqua;
+	}
+
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+	.background-img {
+		background-image: url('src/images/Start.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: 1;
+		background-position: center;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+	}
+
+	.web-title {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		z-index: 2;
+		color: #87D4EC;
+		text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+		font-family: Inter;
+		font-size: 45px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		display: flex;
+		width: 527px;
+		height: 91px;
+		flex-direction: column;
+		justify-content: center;
+		flex-shrink: 0;
+
+	}
+
+	h2 {
+		color: #49A38D;
+		text-align: center;
+		font-family: 'Inknut Antiqua', sans-serif;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 24px;
+		width: 455px;
+		height: 74px;
+		flex-shrink: 0;
+		position: absolute;
+		right: 50px;
+		top: 50%;
+		text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+	}
+
+	.plug-in-button {
+		display: flex;
+		width: 170px;
+		height: 59px;
+		padding: 16px 24px;
+		align-items: flex-start;
+		gap: 8px;
+		flex-shrink: 0;
+		border-radius: 6px;
+		background: #9A53D0;
+		margin: 0 auto;
+		display: block;
+		color: #FFFFFF;
+		text-align: center;
+		font-family: 'Inknut Antiqua', sans-serif;
+		font-size: 29px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 18px;
+
+	}
+
+
+	.reference {
+		color: #FFFFFF;
+		text-align: center;
+		font-size: 15px;
+		width: 500px;
+		position: absolute;
+		bottom: -370px;
+		right: 380px;
+	}
+
+
+
+	.plug-in-button.clicked {
+		width: 140px;
+		height: 50px;
+		font-size: 18px;
+		padding: 5px 10px;
+		position: fixed;
+		bottom: -250px;
+		right: 500px;
+		top: auto;
+	}
+
+
+
+
+	.new-title {
+		color: #87D4EC;
+		font-size: 41px;
+		font-weight: 800;
+		line-height: normal;
+		text-shadow: 1px 1px 1px black;
+		height: 50px;
+		position: fixed;
+		top: -170px;
+		left: 40%;
+		width: 100%;
+
+
+
+	}
+
+
+	.new-text {
+		font-size: 16px;
+		line-height: 1.2;
+		text-align: left;
+		color: white;
+		width: 500px;
+
+		position: absolute;
+		right: -170px;
+		top: -70px;
+
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 21;
+		height: auto;
+		-webkit-box-orient: vertical;
+
+	}
+
+
+
+	.screenshot-image {
+		max-width: 380px;
+		max-height: 310px;
+		position: fixed;
+		left: -200px;
+		top: 50%;
+		transform: translateY(-50%);
+
+	}
+
+	.youtube-link {
+		font-size: 25px;
+		position: fixed;
+		left: -110px;
+		bottom: -150px;
+		color: aqua;
 	}
 }

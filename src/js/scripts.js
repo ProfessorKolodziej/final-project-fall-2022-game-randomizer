@@ -11,14 +11,29 @@ document.addEventListener('DOMContentLoaded', function () {
 	let plugInButton = document.querySelector(".plug-in-button");
 
 	plugInButton.addEventListener('click', function () {
+		plugInButton.classList.add("clicked");
 		changeMainTitle();
+		changeText();
 		changeBackgroundImage();
 		fetchAndDisplayRandomGame();
+
 	});
+
 
 	function changeMainTitle() {
 		let mainTitle = document.getElementById("main-title");
-		mainTitle.innerHTML = "New Main Title";
+		let newMainTitle = "";
+
+		mainTitle.innerHTML = newMainTitle;
+		mainTitle.classList.add("new-title");
+	}
+
+	function changeText() {
+		let mainText = document.getElementById("paragraph");
+		let newMainText = "";
+
+		mainText.innerHTML = newMainText;
+		mainText.classList.add("new-text");
 	}
 
 	function changeBackgroundImage() {
@@ -33,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				const randomIndex = Math.floor(Math.random() * games.length);
 				const gameId = games[randomIndex].id;
 
-				// Fetch game info, screenshots, and YouTube video
+				// Fetch game info, screenshots, and YouTube video, from Chat Gpt
 				Promise.all([fetchGameInfo(gameId), fetchGameScreenshots(gameId), fetchYouTubeLink(games[randomIndex].name)])
 					.then(([gameInfo, screenshots, youtubeLink]) => {
 						updateGameInfo(gameInfo);
@@ -106,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	function fetchYouTubeLink(gameName) {
-		// Create a link to YouTube search
+		// Create a link to YouTube search, from Chat Gpt
 		return Promise.resolve(`https://www.youtube.com/results?search_query=${encodeURIComponent(gameName + ' trailer')}`);
 	}
 
@@ -117,7 +132,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		const game = data;
 		mainTitle.innerHTML = game.name;
 		paragraph.innerHTML = `Release Date: ${game.released}, Rating: ${game.rating}, Description: ${game.description}`;
+		mainTitle.classList.add("new-title");
+		paragraph.classList.add("new-text");
 	}
+
+
+
+
+
+
 
 	function displayScreenshots(screenshots) {
 		// Assuming you have an element with id "screenshots-container" to display screenshots
@@ -130,11 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			screenshotImage.src = screenshots[0];
 			screenshotImage.alt = "Game Screenshot";
 
-			// Set the maximum width for the image
-			screenshotImage.style.maxWidth = "80%";
-			// Set the maximum height for the image
-			screenshotImage.style.maxHeight = "200px"; // Adjust the height as needed
-
+			screenshotImage.classList.add('screenshot-image');
 			// Append the image to the screenshots container
 			screenshotsContainer.appendChild(screenshotImage);
 		} else {
@@ -153,7 +172,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			let youtubeLinkElement = document.createElement('a');
 			youtubeLinkElement.href = youtubeLink;
 			youtubeLinkElement.target = "_blank"; // Open in a new tab
-			youtubeLinkElement.textContent = "Search on YouTube";
+			youtubeLinkElement.textContent = "More Videos";
+			youtubeLinkElement.classList.add("youtube-link")
 
 			// Append the link to the link container
 			linkContainer.appendChild(youtubeLinkElement);
